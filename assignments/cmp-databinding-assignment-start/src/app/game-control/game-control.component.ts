@@ -9,12 +9,14 @@ export class GameControlComponent implements OnInit {
 
   num: number = 0;
 
+  numbers: number[] = [];
+
   timer;
 
   startGame() {
     this.timer = setInterval(() => {
       this.num++;
-      console.log(this.num)
+      this.numbers.push(this.num);
     }, 1000);
   }
 

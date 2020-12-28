@@ -1,2 +1,11 @@
 <button class="btn btn-success" (click)='startGame()'>Start Game</button>
 <button class="btn btn-danger" (click)='stopGame()'>Stop Game</button>
+
+<div class="container" *ngFor='let number of numbers'>
+  <div *ngIf='number % 2 === 0'>
+    <app-even></app-even> {{ num }}
+  </div>
+  <div *ngIf='number % 2 !== 0'>
+    <app-odd></app-odd> {{ num }}
+  </div>
+</div>
